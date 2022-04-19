@@ -1,4 +1,4 @@
-# Heardle Template
+# Charli XCX Template
 
 Forked from [Słuchaj.fun](https://sluchaj.fun) is a clone of famous [Heardle](https://heardle.app) - "that daily music game". <br />
 Uses through the YouTube iFrame API.
