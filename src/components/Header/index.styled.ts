@@ -43,9 +43,11 @@ export const Logo = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 1.35rem;
-    text-align: center;
-    text-align: -webkit-center;
   }
+  
+  text-align: center;
+  text-align: -webkit-center;
+
   font-family: 'Heebo', sans-serif;
   text-transform: uppercase;
   width: max-content;
