@@ -68,3 +68,14 @@ export const Contact = styled.p`
   font-weight: bold;
   opacity: 0.5;
 `;
+
+
+export const Text = styled.p`
+  text-align: center;
+  color: ${({ theme }) => theme.text};
+  margin-top: 1rem;
+`;
+
+export const Link = styled.a`
+  color: ${({ theme }) => theme.text};
+`;

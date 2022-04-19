@@ -30,6 +30,13 @@ export function InfoPopUp({ onClose }: Props) {
           <p>Answer in as few tries as possible and share your score!</p>
         </Styled.Section>
 
+        <Styled.Text>
+          Made with <MdBloodtype /> by{" "}
+          <Styled.Link href="https://twitter.com/thatvng">
+            Hai Vo
+          </Styled.Link>
+        </Styled.Text>
+
         <Button variant="green" style={{ marginTop: 20 }} onClick={onClose}>
           Play
         </Button>
