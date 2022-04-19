@@ -13,7 +13,7 @@ export function scoreToEmoji(guesses: GuessType[]): string {
     empty: "⬛️",
   };
   // const todaysDate = new Date();
-  const prefix = `Charli XCX Heardle - ${datePrint} 🎧`;
+  const prefix = `Charli XCX Heardle - ${datePrint} \n 🎧`;
 
   let scoreEmoji = "";
 
@@ -29,5 +29,5 @@ export function scoreToEmoji(guesses: GuessType[]): string {
     }
   });
 
-  return `${prefix} ${scoreEmoji}`;
+  return `${prefix} ${scoreEmoji} \n`;
 }
