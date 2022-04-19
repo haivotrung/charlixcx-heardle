@@ -23,7 +23,7 @@ export const Content = styled.div`
   width: 40%;
 
   @media (max-width: 768px) {
-    width: 95%;
+    width: 90%;
   }
 
   max-width: 650px;
@@ -40,7 +40,11 @@ export const Content = styled.div`
 
 export const Logo = styled.h1`
   color: ${({ theme }) => theme.text};
-  font-family: "Roboto Serif", serif;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  font-family: 'Heebo', sans-serif;
   text-transform: uppercase;
   width: max-content;
 

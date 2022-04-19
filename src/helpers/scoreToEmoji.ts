@@ -1,10 +1,11 @@
 import { GuessType } from "../types/guess";
 
 export function scoreToEmoji(guesses: GuessType[]): string {
-  const msInDay = 86400000;
-  const startDate = new Date('4/15/2022');
+  // const msInDay = 86400000;
+  // const startDate = new Date('4/19/2022');
   const todaysDate = new Date();
-  const index = Math.floor((todaysDate.getTime() - startDate.getTime() )/msInDay) + 1 
+  const datePrint = todaysDate.toLocaleDateString("en-US");
+  // const index = Math.floor((todaysDate.getTime() - startDate.getTime() )/msInDay) + 1 
   const emojis = {
     incorrect: "🟥",
     correct: "🟩",
@@ -12,7 +13,7 @@ export function scoreToEmoji(guesses: GuessType[]): string {
     empty: "⬛️",
   };
   // const todaysDate = new Date();
-  const prefix = `HeardleTemplate - #${index} 🎧`;
+  const prefix = `Charli XCX Heardle - ${datePrint} 🎧`;
 
   let scoreEmoji = "";
 

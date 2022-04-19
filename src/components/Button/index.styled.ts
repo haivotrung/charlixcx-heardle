@@ -10,7 +10,8 @@ export const Button = styled.button<{ variant?: keyof typeof theme }>`
 
   color: ${({ theme }) => theme.text};
   font-size: 1rem;
-  font-weight: 800;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 354;
 
   width: max-content;
   padding: 12.5px 20px;
