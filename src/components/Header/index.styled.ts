@@ -42,7 +42,7 @@ export const Logo = styled.h1`
   color: ${({ theme }) => theme.text};
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
   font-family: 'Heebo', sans-serif;
   text-transform: uppercase;
