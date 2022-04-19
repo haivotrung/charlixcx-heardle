@@ -10,7 +10,7 @@ export default function TweetButton(props: { tweetText: string }) {
                     options={{
                         size: 'large',
                         text: props.tweetText,
-                        via: 'thatVNG'
+
                     }}
                     url=""
                 />
