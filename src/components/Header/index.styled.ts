@@ -42,12 +42,12 @@ export const Logo = styled.h1`
   color: ${({ theme }) => theme.text};
 
   @media (max-width: 768px) {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
   font-family: 'Heebo', sans-serif;
   text-transform: uppercase;
-  width: max-content;
-
+  width: fit-content;
+  text-align: center;
   -webkit-touch-callout: none;
   user-select: none;
 `;
