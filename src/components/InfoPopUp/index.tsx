@@ -1,8 +1,10 @@
 import React from "react";
 import { IoMusicalNoteOutline, IoHelpCircleOutline } from "react-icons/io5";
+import { MdBloodtype } from "react-icons/md";
 import { Button } from "..";
 
 import * as Styled from "./index.styled";
+
 
 interface Props {
   onClose: () => void;
@@ -27,9 +29,11 @@ export function InfoPopUp({ onClose }: Props) {
         <Styled.Section>
           <p>Answer in as few tries as possible and share your score!</p>
         </Styled.Section>
+
         <Button variant="green" style={{ marginTop: 20 }} onClick={onClose}>
           Play
         </Button>
+
       </Styled.PopUp>
     </Styled.Container>
   );
