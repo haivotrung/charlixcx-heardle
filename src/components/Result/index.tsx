@@ -31,7 +31,7 @@ export function Result({
     60
   );
 
-  const textForTry = ["Let's Call You A Taxi!", "It's Charli Baby!", "A real Angel!"];
+  const textForTry = ["A real Angel!", "Let's Call You A Taxi!", "It's Charli Baby!", "Let's Ride!", "I Thought This Song Was Big In Germany!!!"];
 
   if (didGuess) {
 

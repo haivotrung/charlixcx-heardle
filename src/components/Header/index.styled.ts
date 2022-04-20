@@ -41,12 +41,9 @@ export const Content = styled.div`
 export const Logo = styled.h1`
   color: ${({ theme }) => theme.text};
 
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  font-size: 95%;
   font-family: 'Heebo', sans-serif;
   text-transform: uppercase;
-  width: fit-content;
   text-align: center;
   -webkit-touch-callout: none;
   user-select: none;

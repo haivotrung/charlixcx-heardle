@@ -1,6 +1,7 @@
 import React from "react";
 import YouTube from "react-youtube";
 import { IoPlay } from "react-icons/io5";
+import { IoPause } from "react-icons/io5";
 import { event } from "react-ga";
 
 import { playTimes } from "../../constants";
@@ -64,6 +65,16 @@ export function Player({ id, currentTry }: Props) {
     setIsReady(true);
   }, []);
 
+  const togglePlay = React.useCallback(() => {
+    if (play) {
+      playerRef.current?.internalPlayer.pauseVideo();
+      setPlay(false);
+    } else {
+      playerRef.current?.internalPlayer.playVideo();
+      setPlay(true);
+    }
+  }, [play]);
+
   return (
     <>
       <YouTube opts={opts} videoId={id} onReady={setReady} ref={playerRef} />
@@ -82,12 +93,8 @@ export function Player({ id, currentTry }: Props) {
             <Styled.TimeStamp>1s</Styled.TimeStamp>
             <Styled.TimeStamp>16s</Styled.TimeStamp>
           </Styled.TimeStamps>
-          <IoPlay
-            style={{ cursor: "pointer" }}
-            size={40}
-            color="#fff"
-            onClick={startPlayback}
-          />
+          {play ? <IoPause size={40} onClick={togglePlay} /> : <IoPlay size={40} onClick={startPlayback} />}
+
         </>
       ) : (
         <p>Loading player...</p>
