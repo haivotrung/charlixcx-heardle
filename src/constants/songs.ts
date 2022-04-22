@@ -15,7 +15,7 @@ export const songs = [
   youtubeId: "OSdUDEHL4sQ"
 }, {
   artist: "Charli XCX",
-  name: "Girls Night Out  ",
+  name: "Girls Night Out",
   youtubeId: "IFr3GnboNRU"
 }, {
   artist: "Charli XCX",
