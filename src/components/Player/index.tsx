@@ -82,7 +82,8 @@ export function Player({ id, currentTry }: Props) {
             <Styled.TimeStamp>1s</Styled.TimeStamp>
             <Styled.TimeStamp>16s</Styled.TimeStamp>
           </Styled.TimeStamps>
-          <IoPlay size={40} onClick={startPlayback} />
+          {play ? <IoPause size={40} /> : <IoPlay size={40} onClick={startPlayback} />}
+          {/* <IoPlay size={40} onClick={startPlayback} /> */}
 
         </>
       ) : (
