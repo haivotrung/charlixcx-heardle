@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Charli XCX Heardle
 
 Forked from [Słuchaj.fun](https://sluchaj.fun) is a clone of famous [Heardle](https://heardle.app) - "that daily music game". <br />
