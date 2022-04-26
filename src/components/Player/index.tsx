@@ -26,6 +26,8 @@ export function Player({ id, currentTry }: Props) {
 
   const [play, setPlay] = React.useState<boolean>(false);
 
+  const [playButton, setPlayButton] = React.useState<boolean>(false);
+
   const [currentTime, setCurrentTime] = React.useState<number>(0);
 
   const [isReady, setIsReady] = React.useState<boolean>(false);
@@ -46,6 +48,8 @@ export function Player({ id, currentTry }: Props) {
         playerRef.current?.internalPlayer.pauseVideo();
         playerRef.current?.internalPlayer.seekTo(0);
         setPlay(false);
+        setPlayButton(false);
+
       }
     }
   }, [play, currentTime]);
@@ -54,6 +58,7 @@ export function Player({ id, currentTry }: Props) {
   const startPlayback = React.useCallback(() => {
     playerRef.current?.internalPlayer.playVideo();
     setPlay(true);
+    setPlayButton(true);
     event({
       category: "Player",
       action: "Played song",
@@ -82,7 +87,7 @@ export function Player({ id, currentTry }: Props) {
             <Styled.TimeStamp>1s</Styled.TimeStamp>
             <Styled.TimeStamp>16s</Styled.TimeStamp>
           </Styled.TimeStamps>
-          {play ? <IoPause size={40} /> : <IoPlay size={40} onClick={startPlayback} />}
+          {playButton ? <IoPause size={40} /> : <IoPlay size={40} onClick={startPlayback} />}
           {/* <IoPlay size={40} onClick={startPlayback} /> */}
 
         </>
