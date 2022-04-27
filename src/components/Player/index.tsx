@@ -1,4 +1,5 @@
 import React from "react";
+// import ReactPlayer from 'react-player'
 import YouTube from "react-youtube";
 import { IoPlay, IoPause } from "react-icons/io5";
 import { event } from "react-ga";
@@ -26,7 +27,7 @@ export function Player({ id, currentTry }: Props) {
 
   const [play, setPlay] = React.useState<boolean>(false);
 
-  const [playButton, setPlayButton] = React.useState<boolean>(false);
+  // const [playButton, setPlayButton] = React.useState<boolean>(false);
 
   const [currentTime, setCurrentTime] = React.useState<number>(0);
 
@@ -48,7 +49,6 @@ export function Player({ id, currentTry }: Props) {
         playerRef.current?.internalPlayer.pauseVideo();
         playerRef.current?.internalPlayer.seekTo(0);
         setPlay(false);
-        setPlayButton(false);
 
       }
     }
@@ -58,7 +58,6 @@ export function Player({ id, currentTry }: Props) {
   const startPlayback = React.useCallback(() => {
     playerRef.current?.internalPlayer.playVideo();
     setPlay(true);
-    setPlayButton(true);
     event({
       category: "Player",
       action: "Played song",
@@ -69,9 +68,18 @@ export function Player({ id, currentTry }: Props) {
     setIsReady(true);
   }, []);
 
+  const pausePlayback = React.useCallback(() => {
+    playerRef.current?.internalPlayer.pauseVideo();
+    setPlay(false);
+    event({
+      category: "Player",
+      action: "Paused song",
+    });
+  }, []);
+
   return (
     <>
-      <YouTube opts={opts} videoId={id} onReady={setReady} ref={playerRef} />
+      <YouTube opts={opts} videoId={id} onReady={setReady} ref={playerRef} onPause={pausePlayback} />
       {isReady ? (
         <>
           <Styled.ProgressBackground>
@@ -87,7 +95,7 @@ export function Player({ id, currentTry }: Props) {
             <Styled.TimeStamp>1s</Styled.TimeStamp>
             <Styled.TimeStamp>16s</Styled.TimeStamp>
           </Styled.TimeStamps>
-          {playButton ? <IoPause size={40} /> : <IoPlay size={40} onClick={startPlayback} />}
+          {play ? <IoPause size={40} /> : <IoPlay size={40} onClick={startPlayback} />}
           {/* <IoPlay size={40} onClick={startPlayback} /> */}
 
         </>
