@@ -54,6 +54,7 @@ export function Player({ id, currentTry }: Props) {
     }
   }, [play, currentTime]);
 
+
   // don't call play video each time currentTime changes
   const startPlayback = React.useCallback(() => {
     playerRef.current?.internalPlayer.playVideo();
