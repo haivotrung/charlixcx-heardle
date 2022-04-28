@@ -16,7 +16,15 @@ import ReactGA from "react-ga";
 
 function App() {
 
-  ReactGA.initialize("G-62RSWF09GT");
+  const initReactGA = () => {
+    ReactGA.initialize('G-62RSWF09GT');
+    ReactGA.pageview('test-init-pageview');
+  };
+
+  React.useEffect(() => {
+    initReactGA();
+  }, []);
+
 
   const initialGuess = {
     song: undefined,
@@ -167,3 +175,7 @@ function App() {
 }
 
 export default App;
+function componentDidMount() {
+  throw new Error("Function not implemented.");
+}
+
