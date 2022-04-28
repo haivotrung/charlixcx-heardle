@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Charli XCX Heardle
-=======
-# Charli XCX Template
->>>>>>> d1a77c022f9eb38d5131c6dd31c1fb5e30fead42
 
 Forked from [Słuchaj.fun](https://sluchaj.fun) is a clone of famous [Heardle](https://heardle.app) - "that daily music game". <br />
 Uses through the YouTube iFrame API.
