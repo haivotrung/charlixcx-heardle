@@ -12,20 +12,7 @@ import { Header, InfoPopUp, Game, Footer } from "./components";
 
 import * as Styled from "./app.styled";
 
-import ReactGA from "react-ga";
-
 function App() {
-
-  const initReactGA = () => {
-    ReactGA.initialize('G-62RSWF09GT');
-    ReactGA.pageview('test-init-pageview');
-  };
-
-  React.useEffect(() => {
-    initReactGA();
-  }, []);
-
-
   const initialGuess = {
     song: undefined,
     skipped: false,
