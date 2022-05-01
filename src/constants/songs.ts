@@ -53,7 +53,13 @@ export const songs = [
   artist: "Charli XCX",
   name: "Emotional",
   youtubeId: "zFYwdBZSOsc"
-}, {
+},
+{
+  artist: "Charli XCX, Kyary Pamyu Pamyu",
+  name: "Bounce",
+  youtubeId: "ygVSuP9KEhc"
+},
+{
   artist: "Charli XCX, Sky Ferreira",
   name: "Cross You Out",
   youtubeId: "2cxwTtfXG0c"
