@@ -17,6 +17,10 @@ export function Player({ id, currentTry }: Props) {
   const opts = {
     width: "0",
     height: "0",
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
   };
 
   // react-youtube doesn't export types for this
