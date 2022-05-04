@@ -9,7 +9,7 @@ export function Footer() {
       <Styled.Text>
         Made with <MdBloodtype /> by{" "}
         <Styled.Link href="https://twitter.com/thatvng">
-          Hai Vo
+          Hai
         </Styled.Link>
       </Styled.Text>
     </footer>
