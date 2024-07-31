@@ -8,7 +8,7 @@ export function Footer() {
     <footer>
       <Styled.Text>
         Made with <MdBloodtype /> by{" "}
-        <Styled.Link href="https://twitter.com/thatvng">
+        <Styled.Link href="">
           Hai
         </Styled.Link>
       </Styled.Text>
